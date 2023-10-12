@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+body{
+    background-color: #E00078;
+    color: #ffff;
+    font-family:'Outfit', sans-serif;
+    font-size: 20px;
+}
+
+.Barbielogo{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Barbielogo img{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.BarraBarbie a{
+    color: white;
+    text-decoration: none;
+}
+.BarraBarbie ul{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.BarraBarbie li{
+    margin: 0 10px;
+}
+
+.menuhamburguesa{
+    display: none; 
+    cursor: pointer;
+}
+
+.BarraBarbie ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.BarraBarbie li{
+    margin: 0 10px; 
+}
+
+.footerfinal{
+    font-family: 'Outfit', sans-serif;
+    font-size: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.iconos{
+    margin-top: 16px;
+}
+
+.iconoWPP img{
+    margin-top: 16px;
+    width: 150px;
+    height: 150px;
+    position:static;
+    cursor: pointer;
+}
+
+.footerfinal{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 170px;
+    margin-bottom: 0%;
+    margin-left: 5px;
+    flex-wrap: wrap;
+}
+
+.iconos, .iconoWPP {
+    margin: 10px;
+}
+
+.iconoWPP{
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .footerfinal {
+        flex-direction: column;
+        align-items: center;
+    }
+}

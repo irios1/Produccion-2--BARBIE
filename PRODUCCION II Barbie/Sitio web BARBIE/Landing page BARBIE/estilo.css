@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+body{
+    background-image: url(./imagenes/landingBARBIE.jpg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    background-attachment: fixed; 
+    height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    border: solid white;
+    padding: 10px;
+    margin-left: 140px;
+    margin-top: 40px;
+    width: 25%;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    width: 50%;
+}
+.clubdefans{
+    margin-left: 70px;
+    margin-top: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+}
+
+.SUMATE{
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 50px;
+    animation-name: agrandarsumate;
+    animation-duration: 2s;
+}
+
+.boton{
+    background-color: #ffffff;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.footerfinal{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.iconos{
+    margin-top: 16px;
+}
+
+h1{
+    margin-left: 100px;
+    margin-top: 200px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 35px;
+}
+
+.footerfinal2{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 170px;
+}
+
+#boton:hover {
+    background-color:#FF00A6;
+}
+
+@keyframes agrandarsumate{
+    0%{letter-spacing: normal;}
+    50%{letter-spacing: 20px;}
+    100%{letter-spacing: normal;}
+}
+
+@media (max-width: 767px) {
+    .clubdefans {
+        margin-left: 40px; 
+        margin-top: 20px; 
+        font-size: 24px; 
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .clubdefans {
+        margin-left: 40px; 
+        font-size: 26px; 
+        white-space: nowrap;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .clubdefans {
+        margin-left: 100px; 
+        margin-top: 60px; 
+        font-size: 28px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .SUMATE{
+        margin-top: 10px;
+    }
+}
