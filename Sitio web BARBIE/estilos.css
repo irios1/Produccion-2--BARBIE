@@ -1,43 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    cursor: url(imagenes/cursorbarbie.cur), auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
 
 body{
-    background-color: #E00078;
+    background-color: #64B9E7;
     color: #ffff;
     font-family:'Outfit', sans-serif;
     font-size: 20px;
 }
 
-.Barbielogo{
-    position:relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.pantallaBARBIE {
+    position: relative;
 }
 
-.Barbielogo img{
-    background-size: cover;
+
+.Barbielogo{
+    position:absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    text-align: center;
+}
+
+.Barbielogo img {
+    height: 100%;
+    animation-name: girarBARBIE;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-style: preserve-3d; 
+}
+
+@keyframes girarBARBIE {
+    from {
+        transform: rotateY(90deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.fondoinicioBARBIE {
+    text-align: center;
 }
 
 .BarraBarbie a{
-    color: white;
+    color: white !important;
     text-decoration: none;
 }
-.BarraBarbie ul{
-    margin-top: 30px;
-    display: flex;
+
+/* .BarraBarbie ul{
+    margin-top: 50px;
     justify-content: space-around; 
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+} */
+
+.navbar-toggler{
+    background-color: #FF00A6;
 }
 
-.footerfinal{
-    font-family: 'Outfit', sans-serif;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
+.navbar-toggler:hover{
+    background-color: #feabc1;
+}
+
+.BarraBarbie a:hover{
+    cursor: pointer;
+    color: #FF00A6 !important;
+    font-style: bold;
 }
 
 .iconos{
@@ -52,16 +94,508 @@ body{
     cursor: pointer;
 }
 
-.footerfinal2{
+.iconos, .iconoWPP {
+    margin: 10px;
+}
+
+.iconoWPP{
+    position: fixed;
+    margin-left: 90% ;
+    top: 70%;
+
+}
+
+.BARBIEEVOLUTION{
+    scroll-margin-top: 5ex;
+    background-image: url(./imagenes/white-cloud-blue-sky.jpg);
+}
+
+.BARBIEEVOLUTION a{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 100px;
+    color: #ffff;
+    margin-left: 40px;
+}
+
+.extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+}
+
+.extras img {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    transition: transform 0.3s, filter 0.3s ease-in-out;
+    animation: vibrar 1s ease-in-out infinite, agrandar 1s ease-in-out infinite alternate;
+}
+
+@keyframes vibrar {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: translateX(-5px);
+        filter: brightness(1.2);
+    }
+    100% {
+        transform: translateX(5px);
+        filter: brightness(1);
+    }
+}
+
+@keyframes agrandar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+
+.corona img{
+    margin-left: 10px;
+
+}
+
+.WOMENBARBIES{
+    scroll-margin-top: 10ex;
+}
+
+.youcanbeanything{
+    z-index: 100;
+    position: fixed;
+}
+
+.youcanbeanything img{
+    width: 170px;
+    height: 85px;
+    margin-top: 30px;
+    margin-left: 20px;
+    
+}
+
+.cont-trailer{
+   text-align: right;
+   margin-top: 80px;
+   margin-right: 20px;
+}
+
+.carpetita img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carpetita p {
+    font-family: MSSansSerif;
+    font-size: 10px;
+    margin-left: 87%;
+}
+
+.carpetita:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tipografiacarpetita{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:end ;
+}
+
+.tipografiacarpetita p{
+    color: #FF00A6;
+    margin:0;
+    text-decoration: none;
+}
+
+.tipografiacarpetita img{
+    width: 160px;
+    height: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel-inner h5{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    color: #F7E802;
+    text-transform: uppercase;
+    border-color: none;
+}
+
+.carousel-inner img{
+    width: 500px;
+    height: 600px;
+    margin-top: 0;
+}
+
+.carousel-inner button{
+    background-color: #FF00A6; 
+    border: none; 
+    padding: 10px 20px; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+.custom-btn:hover {
+    background-color: #FFB6E6;
+    color: #FF77A9;
+    transform: scale(1.1);
+}
+
+.evolutionTEXT {
+    padding: 20px;
+}
+
+.evolutionTEXT p{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7.5em;
+    color: #ffff;
+    line-height: 0.8;
+    margin: 0;
+    max-width: 630px;
+    width: 100%;
+}
+
+.swiper{
+    background: url(/blobs/pink-world-blob-1.webp) left top / 100% no-repeat rgb(255, 191, 222);
+    transform: translate(0px, 0px);
+}
+
+.swiper-slide{
+    background-position:center;
+    background-size: cover;
+    width: 250px;
+    margin-top: 40px;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+}
+
+.swiper-wrapper p{
+    color: #ffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.swiper-wrapper p:hover{
+    color: #F7E802;
+    font-weight: bold;
+}
+.paginacompleta{
+    background-color: #64B9E7;
+}
+
+
+.barbieland {
+    position: relative;
+}
+
+.fondo-barbieland{
+    width: 100%;
+}
+
+.barbielandX2{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    text-align: center;
+}
+.barbielandX2 img{
+    width: 50px;
+    margin: auto;
+    display: block;
+}
+
+
+.barbielandX2 p{
+    font-size: 15px;
+}
+
+.presentacionBARBIE h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4em;
+    color: black;
+}
+
+/* .informacionBARBIE {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+} */
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #FF00A6;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card h5{
+    font-family: "Outfit", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.card p{
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+.card:hover {
+    background-color: #FF00A6;
+    color: #ffff;
+    transform: scale(1.1);
+}
+
+.bg-pink{
+    background-color: #feabc1;
+}
+
+.mujeres img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.mujeres .col {
+    margin-bottom: 20px;
+}
+
+.img-zara{
+    width: 300px;
+margin: auto;
+}
+
+
+.foto6 a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.carousel-indicators{
+    display: none;
+}
+
+.carousel-control-prev{
+    background-color: #64B9E7;
+    border-color: #64B9E7;
+}
+
+.carousel-control-next{
+    background-color: #64B9E7;
+    border-color:  #64B9E7;
+}
+
+.boton2 a{
+    display: block;
+    width: 162px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 77px 13px;
+    padding: 10px 19px;
+    background-color: #FF00A6;
+    color: #ffff;
+    margin-top: 500px;
+    margin-left: -360px;
+    text-decoration: none;
+}
+
+.boton2 a:hover{
+    background-color: #FFB6E6;
+    color: #FF77A9;
+}
+
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.CM{
+    text-align: center;
+}
+
+.CM h1{
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+.CM p{
+    font-size: 20px;
+    color: #ffff;
+}
+
+.boton{
+    display: block;
+    width: 162px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 77px auto;
+    padding: 10px 19px;
+    background-color: #FF00A6;
+    color: #ffff;
+    text-decoration: none;
+
+}
+
+.boton:hover{
+    background-color: #FFB6E6;
+    color: #FF77A9;
+}
+
+.CollabsMerch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    background-image: linear-gradient(to bottom, #FF77A9, #FFB6E6);
+    margin: 0;
+    padding: 40px;
+}
+
+.CollabsMerch img {
+    width: 500px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.CollabsMerch img:hover {
+    transform: scale(1.1);
+}
+
+
+.nubes{
+    text-align: center;
+}
+
+
+
+.Contact{
+    background-color: #F7E802;
+    color: black;
+    padding: 20px;
+        
+}
+.Contact p{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 170px;
+}
+
+
+.cont-form{
+    text-align: center;
+    position: relative;
+}
+
+.Contact img{
+    animation: brilloAgrandarAchicar 2s infinite alternate;
+}
+
+  @keyframes brilloAgrandarAchicar {
+    0% {
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    100% {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+  }
+  
+form {
+   position: absolute;
+   top: 50%;
+   left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#button{
+    background-color: #FF00A6;
+    color: #ffff;
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    border-color: #FF00A6;
+    border-radius: 10px;
+    margin: 20px 30px;
+    width: 80px;
+    height: 35px;
+    font-weight: 700;
+}
+
+#button:hover{
+    background-color: #F7E802;
+    color: black;
+    border-color: #FF00A6;
+    font-weight: 700;
+}
+
+.footerfinal{
     font-family: 'Outfit', sans-serif;
     font-size: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 170px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
-#BarraBarbie:hover {
-    color:black;
+
+@media screen and (max-width: 769px) {
+
+    .CollabsMerch{
+        flex-direction: column;
+    }
+
+    .evolutionTEXT p{
+        font-size: 5em;
+    }
+
+    .footerfinal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nubesslide img{
+        flex-direction: column;
+        align-items: center;
+    }
 }
